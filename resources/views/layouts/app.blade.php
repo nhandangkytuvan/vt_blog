@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     @yield('css')
+    <link href="{{ asset('public/css/overlay.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/codepen.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
@@ -29,7 +30,7 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-top">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -42,7 +43,7 @@
                     </a>
                 </div>
 
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <div class="collapse navbar-collapse" id="app-navbar-top">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
                         &nbsp;
@@ -80,15 +81,35 @@
             </div>
         </nav>
         <div class="container">
-            <div class="col-md-3">
+            <div class="col-md-3" id="menuTerm">
                 @yield('menu')
             </div>
             <div class="col-md-7">
                 @yield('content')
             </div>
-            <div class="col-md-2">
+            <div class="col-md-2" id="realTime">
                 @yield('realtime')
             </div>
+        </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="container">
+                <ul class="nav navbar-nav pull-left">
+                    <li><a href="javascript:;" onclick="openNav()">MenuLeft</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right pull-right">
+                    <li><a href="javascript:;" onclick="closeNav()">MenuRight</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- overlaymenu xs -->
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="btn btn-danger btn-sm closebtn" onclick="closeNav()"><i class="glyphicon glyphicon-menu-left"></i></a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+            
         </div>
     </div>
     @yield('modal')
@@ -100,6 +121,7 @@
     <script src="{{ asset('public/js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('public/js/autosize/dist/autosize.min.js') }}"></script>
     <script src="{{ asset('public/js/clipboard/dist/clipboard.min.js') }}"></script>
+    <script src="{{ asset('public/js/overlay.js') }}"></script>
     <script src="{{ asset('public/js/myapp.js') }}"></script>
 </body>
 </html>

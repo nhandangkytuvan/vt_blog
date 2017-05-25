@@ -33,7 +33,7 @@
                         <label for="">Chọn cấp danh mục</label>
                         <select name="term_id" class="form-control">
                             <option value="0">Chọn cấp danh mục</option>
-                            {!! APITerm::getOptionSelect($terms) !!}
+                            {!! APITerm::getOptionSelectBladeTerm($terms) !!}
                         </select>
                     </div>
                 </div>

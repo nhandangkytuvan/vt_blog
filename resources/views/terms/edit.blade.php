@@ -35,22 +35,23 @@
                         <label for="">Chọn cấp danh mục</label>
                         <select name="term_id" class="form-control">
                             <option value="0">Chọn cấp danh mục</option>
-                            {!! APITerm::getOptionSelect($terms,$term->term_id) !!}
+                            {!! APITerm::getOptionSelectBladeTerm($terms,$term->id,$term->term_id,0) !!}
                         </select>
                     </div>
                 </div>
             </div>
+            @php $content = json_decode($term->content,true);@endphp
             <div class="form-group">
                 <label class="control-label">Mô tả</label>
                 <textarea type="text" class="form-control autosize" name="description">{{ $term->description }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ $term->keyword }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{{ $content['keyword'] }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Meta</label>
-                <textarea type="text" class="form-control autosize" name="meta">{{ $term->meta }}</textarea>
+                <textarea type="text" class="form-control autosize" name="meta">{{ $content['meta'] }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa danh mục</button> 

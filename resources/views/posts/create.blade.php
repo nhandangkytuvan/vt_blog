@@ -33,7 +33,7 @@
                         <label for="">Chọn cấp danh mục</label>
                         <select name="term_id" class="form-control">
                             <option value="0">Chọn cấp danh mục</option>
-                            {!! APITerm::getOptionSelect($terms) !!}
+                            {!! APITerm::getOptionSelectBladePost($terms) !!}
                         </select>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Nội dung</label>
-                <textarea type="text" class="form-control tinymce" name="content">{{ old('content') }}</textarea>
+                <textarea type="text" class="form-control tinymce" name="noidung">{{ old('noidung') }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>

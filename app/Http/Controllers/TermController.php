@@ -53,6 +53,21 @@ class TermController extends Controller
                 $term->$value = $file_name;
             }
         }
+        //json content
+        $input = $request->except(array_merge(['_token','_method'],$term->fillable));
+        $content = [];
+        foreach ($input as $key => $value) {
+            if($request->has($key)){
+                $content[$key] = $request->input($key);
+            }
+            if($request->hasFile($key)){
+                $file = $request->file($key);
+                $file_name = time().'.'.$file->extension();
+                $file->move(public_path('upload'),$file_name);
+                $content[$key] = $file_name;
+            }
+        }
+        $term->content = json_encode($content);
         $term->save();
         return redirect('terms/'.$term->id.'/edit');
     }
@@ -100,6 +115,21 @@ class TermController extends Controller
                 $term->$value = $file_name;
             }
         }
+        //json content
+        $input = $request->except(array_merge(['_token','_method'],$term->fillable));
+        $content = [];
+        foreach ($input as $key => $value) {
+            if($request->has($key)){
+                $content[$key] = $request->input($key);
+            }
+            if($request->hasFile($key)){
+                $file = $request->file($key);
+                $file_name = time().'.'.$file->extension();
+                $file->move(public_path('upload'),$file_name);
+                $content[$key] = $file_name;
+            }
+        }
+        $term->content = json_encode($content);
         $term->save();
         return redirect('terms/'.$term->id.'/edit');
     }

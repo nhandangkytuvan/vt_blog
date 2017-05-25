@@ -27,7 +27,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        $this->authorize('create', Post::class);
+        //$this->authorize('create', Post::class);
         $terms = App\Term::get();
         return view('posts.create',['terms'=>$terms]);
     }
@@ -53,6 +53,21 @@ class PostController extends Controller
                 $post->$value = $file_name;
             }
         }
+        //json content
+        $input = $request->except(array_merge(['_token','_method'],$post->fillable));
+        $content = [];
+        foreach ($input as $key => $value) {
+            if($request->has($key)){
+                $content[$key] = $request->input($key);
+            }
+            if($request->hasFile($key)){
+                $file = $request->file($key);
+                $file_name = time().'.'.$file->extension();
+                $file->move(public_path('upload'),$file_name);
+                $content[$key] = $file_name;
+            }
+        }
+        $post->content = json_encode($content);
         $post->save();
         return redirect('posts/'.$post->id.'/edit'); 
     }
@@ -100,6 +115,21 @@ class PostController extends Controller
                 $post->$value = $file_name;
             }
         }
+        //json content
+        $input = $request->except(array_merge(['_token','_method'],$post->fillable));
+        $content = [];
+        foreach ($input as $key => $value) {
+            if($request->has($key)){
+                $content[$key] = $request->input($key);
+            }
+            if($request->hasFile($key)){
+                $file = $request->file($key);
+                $file_name = time().'.'.$file->extension();
+                $file->move(public_path('upload'),$file_name);
+                $content[$key] = $file_name;
+            }
+        }
+        $post->content = json_encode($content);
         $post->save();
         return redirect('posts/'.$post->id.'/edit'); 
     }

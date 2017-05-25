@@ -21,8 +21,7 @@ class CreateTermsTable extends Migration
             $table->string('avatar')->nullable();
             $table->string('alias')->nullable();
             $table->text('description')->nullable();
-            $table->text('keyword')->nullable();
-            $table->text('meta')->nullable();
+            $table->longtext('content')->nullable();
             $table->timestamps();
         });
     }
