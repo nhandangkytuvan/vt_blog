@@ -94,24 +94,27 @@
         <nav class="navbar navbar-default navbar-fixed-bottom">
             <div class="container">
                 <ul class="nav navbar-nav pull-left">
-                    <li><a href="javascript:;" onclick="openNav()">MenuLeft</a></li>
+                    <li><a href="javascript:;" data-toggle="modal" data-target="#myModalMenuTerm">MenuLeft</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right pull-right">
-                    <li><a href="javascript:;" onclick="closeNav()">MenuRight</a></li>
+                    <li><a href="javascript:;">MenuRight</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <!-- overlaymenu xs -->
-    <!-- The overlay -->
-    <div id="myNav" class="overlay">
-        <!-- Button to close the overlay navigation -->
-        <a href="javascript:void(0)" class="btn btn-danger btn-sm closebtn" onclick="closeNav()"><i class="glyphicon glyphicon-menu-left"></i></a>
-        <!-- Overlay content -->
-        <div class="overlay-content">
-            
+    <!-- Modal -->
+     <div class="modal fade" id="myModalMenuTerm">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body" style="padding:0;margin-bottom: -23px;">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
-    </div>
+     </div>
+
     @yield('modal')
     <!-- Scripts -->
     <script src="{{ asset('public/js/app.js') }}"></script>
