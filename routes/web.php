@@ -24,3 +24,7 @@ Route::resource('users', 'UserController');
 Route::resource('medias', 'MediaController');
 
 Route::get('sendmail','MyMailController@sendmail');
+Route::get('mydb/terms','MydbController@terms');
+Route::get('mydb/posts','MydbController@posts');
+Route::get('mydb/medias','MydbController@medias');
+Route::get('mydb/users','MydbController@users');

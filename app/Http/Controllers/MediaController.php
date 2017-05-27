@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreMedia;
 use App\Media;
 use DB,File,Auth,App,Session;
 class MediaController extends Controller
@@ -44,7 +45,7 @@ class MediaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreMedia $request)
     {
         $files = $request->file('avatar');
         if(count($files)){

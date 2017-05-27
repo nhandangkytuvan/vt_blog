@@ -25,9 +25,14 @@
                     @endif
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <label class="control-label">Tên</label>
                 <input type="text" class="form-control" name="name" value="{{ $term->name }}">
+                @if ($errors->has('name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                @endif
             </div>
             <div class="row">
                 <div class="col-sm-8">
@@ -47,11 +52,11 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ $content['keyword'] }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($content['keyword']) ? $content['keyword'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Meta</label>
-                <textarea type="text" class="form-control autosize" name="meta">{{ $content['meta'] }}</textarea>
+                <textarea type="text" class="form-control autosize" name="meta">{{ isset($content['meta']) ? $content['meta'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa danh mục</button> 

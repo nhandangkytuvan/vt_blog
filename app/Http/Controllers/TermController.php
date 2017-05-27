@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreTerm;
+use App\Http\Requests\UpdateTerm;
 use App\Term;
 use DB,File,Auth,App,Session;
 class TermController extends Controller
@@ -38,7 +40,7 @@ class TermController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreTerm $request)
     {
         $term = new App\Term;
         $term->user_id = Auth::id();
@@ -102,7 +104,7 @@ class TermController extends Controller
      * @param  \App\Term  $term
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Term $term)
+    public function update(UpdateTerm $request, Term $term)
     {
         foreach ($term->fillable as $key => $value) {
             if($request->has($value)){

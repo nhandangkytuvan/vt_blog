@@ -11,16 +11,17 @@
                         <img src="{{ asset('public/upload/'.$media->avatar) }}" alt="" class="img-responsive">
                     </div>
                     <div class="col-md-3">
-                        <p>Tên : <strong>{{ $media->name }}</strong></p>
-                        <p>Danh mục : {{ $media->term ? $media->term->name : '' }}</p>
-                        <p>Mô tả: {{ $media->description }}</p>
+                        <div class="panel" style="border-left: 1px solid #d3e0e9;">
+                            <ul class="list-group">
+                                <li class="list-group-item">Tên : <strong>{{ $media->name }}</strong></li>
+                                <li class="list-group-item">Danh mục : {{ $media->term ? $media->term->name : '' }}</li>
+                                <li class="list-group-item">Mô tả: {{ $media->description }}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="panel-footer">
-                <button type="button" class="btn" data-clipboard data-clipboard-text="121">
-                    <i class="glyphicon glyphicon-duplicate"></i> Copy
-                </button>
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->

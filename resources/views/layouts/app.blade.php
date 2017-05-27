@@ -117,6 +117,7 @@
 
     @yield('modal')
     <!-- Scripts -->
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script src="{{ asset('public/js/app.js') }}"></script>
     <script src="{{ asset('public/js/jquery.form.min.js') }}"></script>
     <script src="{{ asset('public/js/jquery.popupoverlay.min.js') }}"></script>
@@ -124,6 +125,7 @@
     <script src="{{ asset('public/js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
     <script src="{{ asset('public/js/autosize/dist/autosize.min.js') }}"></script>
     <script src="{{ asset('public/js/clipboard/dist/clipboard.min.js') }}"></script>
+    <script src="{{ asset('public/js/myclipboard.js') }}"></script>
     <script src="{{ asset('public/js/overlay.js') }}"></script>
     <script src="{{ asset('public/js/myapp.js') }}"></script>
 </body>

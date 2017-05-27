@@ -19,6 +19,9 @@
                     </div>
                     <div class="panel-footer clearfix">
                         {{ $media->name }}
+                        <button type="button" class="btn" data-clipboard-demo data-clipboard-text="{{ asset('public/upload/'.$media->avatar) }}">
+                            <i class="glyphicon glyphicon-link"></i> Copy
+                        </button>
                         <div class="pull-right">
                             <div class="dropdown">
                                 <a class="dropdown-toggle" href="javascript:;" data-toggle="dropdown">

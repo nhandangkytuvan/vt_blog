@@ -23,9 +23,14 @@
                 <div class="col-sm-6" id="image-holder">
                 </div>
             </div>
-            <div class="form-group">
+            <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 <label class="control-label">Tên</label>
                 <input type="text" class="form-control" name="name"  value="{{ old('name') }}">
+                @if ($errors->has('name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
+                @endif
             </div>
             <div class="row">
                 <div class="col-sm-8">

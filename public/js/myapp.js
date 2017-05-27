@@ -17,5 +17,4 @@ $(document).ready(function() {
         inline_styles: true,
     });	
     autosize($("textarea.autosize"));
-    var clipboard = new Clipboard('[data-clipboard]')
 });

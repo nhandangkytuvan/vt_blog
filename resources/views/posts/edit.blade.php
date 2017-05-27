@@ -47,11 +47,11 @@
             @php $content = json_decode($post->content,true);@endphp
             <div class="form-group">
                 <label class="control-label">Nội dung</label>
-                <textarea type="text" class="form-control tinymce" name="noidung">{{ $content['noidung'] }}</textarea>
+                <textarea type="text" class="form-control tinymce" name="detail">{!! isset($content['detail']) ? $content['detail'] : '' !!}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ $content['keyword'] }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($content['keyword']) ? $content['keyword'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa bài viết</button> 
