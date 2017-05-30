@@ -22,6 +22,7 @@ class CreatePostsTable extends Migration
             $table->string('alias')->nullable();
             $table->text('description')->nullable();
             $table->longText('content')->nullable();
+            $table->longText('orther')->nullable();
             $table->timestamps();
         });
     }

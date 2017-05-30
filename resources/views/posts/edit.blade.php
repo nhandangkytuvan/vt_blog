@@ -44,14 +44,14 @@
                 <label class="control-label">Mô tả</label>
                 <textarea type="text" class="form-control autosize" name="description">{{ $post->description }}</textarea>
             </div>
-            @php $content = json_decode($post->content,true);@endphp
+            @php $orther = json_decode($post->orther,true);@endphp
             <div class="form-group">
                 <label class="control-label">Nội dung</label>
-                <textarea type="text" class="form-control tinymce" name="detail">{!! isset($content['detail']) ? $content['detail'] : '' !!}</textarea>
+                <textarea type="text" class="form-control tinymce" name="content">{!! $post->content !!}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($content['keyword']) ? $content['keyword'] : '' }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($orther['keyword']) ? $orther['keyword'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa bài viết</button> 

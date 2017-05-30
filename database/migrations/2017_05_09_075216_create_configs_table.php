@@ -17,6 +17,7 @@ class CreateConfigsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->string('avatar')->nullable();
+            $table->string('alias')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();

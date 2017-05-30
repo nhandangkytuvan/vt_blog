@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label class="control-label">Nội dung</label>
-                <textarea type="text" class="form-control tinymce" name="noidung">{{ old('noidung') }}</textarea>
+                <textarea type="text" class="form-control tinymce" name="content">{{ old('content') }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>

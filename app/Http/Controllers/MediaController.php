@@ -22,10 +22,18 @@ class MediaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $medias = Media::paginate(15);
-        return view('medias.index',['medias'=>$medias]);
+        $terms = App\Term::get();
+        $medias = Media::orderBy('id','desc');
+        if($request->has('term_id')){
+            $medias->whereTermId($request->input('term_id'));
+        }
+        if($request->has('name')){
+            $medias->where('name','like','%'.$request->input('name').'%');
+        }
+        $medias = $medias->paginate(15);
+        return view('medias.index',['medias'=>$medias,'terms'=>$terms]);
     }
 
     /**

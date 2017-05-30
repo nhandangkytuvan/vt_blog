@@ -8,6 +8,15 @@ use DB,File,Auth,App,Session;
 class ConfigController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -48,21 +57,6 @@ class ConfigController extends Controller
                 $config->$value = $file_name;
             }
         }
-        //json content
-        $input = $request->except(array_merge(['_token','_method'],$config->fillable));
-        $content = [];
-        foreach ($input as $key => $value) {
-            if($request->has($key)){
-                $content[$key] = $request->input($key);
-            }
-            if($request->hasFile($key)){
-                $file = $request->file($key);
-                $file_name = time().'.'.$file->extension();
-                $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
-            }
-        }
-        $config->content = json_encode($content);
         $config->save();
         return redirect('configs/'.$config->id.'/edit'); 
     }
@@ -109,21 +103,6 @@ class ConfigController extends Controller
                 $config->$value = $file_name;
             }
         }
-        //json content
-        $input = $request->except(array_merge(['_token','_method'],$config->fillable));
-        $content = [];
-        foreach ($input as $key => $value) {
-            if($request->has($key)){
-                $content[$key] = $request->input($key);
-            }
-            if($request->hasFile($key)){
-                $file = $request->file($key);
-                $file_name = time().'.'.$file->extension();
-                $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
-            }
-        }
-        $config->content = json_encode($content);
         $config->save();
         return redirect('configs/'.$config->id.'/edit'); 
     }

@@ -13,7 +13,7 @@
             <td>Ảnh</td>
             <td>Tên</td>
             <td>Danh mục</td>
-            <td>L.xem</td>
+            <td>T.giả</td>
             <td>#</td>
         </tr>
         @foreach($posts as $key => $post)
@@ -26,7 +26,7 @@
             </td>
             <td><a href="#">{{ $post->name }}</a></td>
             <td>{{ $post->term ? $post->term->name : '' }}</td>
-            <td></td>
+            <td>{{ $post->user ? $post->user->name : '' }}</td>
             <td>
                 <div class="clearfix">
                     <div class="pull-right">
@@ -63,7 +63,9 @@
     </div>
 </div>
 @endsection('content')
-
+@section('realtime')
+    @include('layouts.searchPost',['terms'=>$terms])
+@endsection('realtime')
 @foreach($posts as $key => $post)
     @include('layouts.modalDestroyPost',['post'=>$post])
 @endforeach

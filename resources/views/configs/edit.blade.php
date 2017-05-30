@@ -38,7 +38,7 @@
                 <textarea type="text" class="form-control autosize" name="content">{{ $config->content }}</textarea>
             </div>
             <div class="form-group">
-                <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa danh mục</button> 
+                <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa lại</button> 
             </div>
         </div>
     </div>

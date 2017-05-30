@@ -45,18 +45,18 @@
                     </div>
                 </div>
             </div>
-            @php $content = json_decode($term->content,true);@endphp
+            @php $orther = json_decode($term->orther,true);@endphp
             <div class="form-group">
                 <label class="control-label">Mô tả</label>
                 <textarea type="text" class="form-control autosize" name="description">{{ $term->description }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($content['keyword']) ? $content['keyword'] : '' }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($orther['keyword']) ? $orther['keyword'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Meta</label>
-                <textarea type="text" class="form-control autosize" name="meta">{{ isset($content['meta']) ? $content['meta'] : '' }}</textarea>
+                <textarea type="text" class="form-control autosize" name="meta">{{ isset($orther['meta']) ? $orther['meta'] : '' }}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa danh mục</button> 

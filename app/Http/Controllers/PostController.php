@@ -15,10 +15,18 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $posts = Post::paginate(10);
-        return view('posts.index',['posts'=>$posts]);
+        $terms = App\Term::get();
+        $posts = Post::orderBy('id','desc');
+        if($request->has('term_id')){
+            $posts->whereTermId($request->input('term_id'));
+        }
+        if($request->has('name')){
+            $posts->where('name','like','%'.$request->input('name').'%');
+        }
+        $posts = $posts->paginate(10);
+        return view('posts.index',['posts'=>$posts,'terms'=>$terms]);
     }
 
     /**
@@ -54,21 +62,21 @@ class PostController extends Controller
                 $post->$value = $file_name;
             }
         }
-        //json content
+        //json orther
         $input = $request->except(array_merge(['_token','_method'],$post->fillable));
-        $content = [];
+        $orther = [];
         foreach ($input as $key => $value) {
             if($request->has($key)){
-                $content[$key] = $request->input($key);
+                $orther[$key] = $request->input($key);
             }
             if($request->hasFile($key)){
                 $file = $request->file($key);
                 $file_name = time().'.'.$file->extension();
                 $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
+                $orther[$key] = $file_name;
             }
         }
-        $post->content = json_encode($content);
+        $post->orther = json_encode($orther);
         $post->save();
         return redirect('posts/'.$post->id.'/edit'); 
     }
@@ -116,21 +124,21 @@ class PostController extends Controller
                 $post->$value = $file_name;
             }
         }
-        //json content
+        //json orther
         $input = $request->except(array_merge(['_token','_method'],$post->fillable));
-        $content = [];
+        $orther = [];
         foreach ($input as $key => $value) {
             if($request->has($key)){
-                $content[$key] = $request->input($key);
+                $orther[$key] = $request->input($key);
             }
             if($request->hasFile($key)){
                 $file = $request->file($key);
                 $file_name = time().'.'.$file->extension();
                 $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
+                $orther[$key] = $file_name;
             }
         }
-        $post->content = json_encode($content);
+        $post->orther = json_encode($orther);
         $post->save();
         return redirect('posts/'.$post->id.'/edit'); 
     }
@@ -143,6 +151,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
+        $this->authorize('delete', $post);
         $post->delete();
         File::delete(public_path('upload\\'.$post->avatar));
         DB::statement('ALTER TABLE posts AUTO_INCREMENT = 1');

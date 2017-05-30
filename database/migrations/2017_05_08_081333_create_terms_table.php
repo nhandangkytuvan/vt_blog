@@ -22,6 +22,7 @@ class CreateTermsTable extends Migration
             $table->string('alias')->nullable();
             $table->text('description')->nullable();
             $table->longtext('content')->nullable();
+            $table->longtext('orther')->nullable();
             $table->timestamps();
         });
     }

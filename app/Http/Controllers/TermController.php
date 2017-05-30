@@ -55,21 +55,21 @@ class TermController extends Controller
                 $term->$value = $file_name;
             }
         }
-        //json content
+        //json orther
         $input = $request->except(array_merge(['_token','_method'],$term->fillable));
-        $content = [];
+        $orther = [];
         foreach ($input as $key => $value) {
             if($request->has($key)){
-                $content[$key] = $request->input($key);
+                $orther[$key] = $request->input($key);
             }
             if($request->hasFile($key)){
                 $file = $request->file($key);
                 $file_name = time().'.'.$file->extension();
                 $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
+                $orther[$key] = $file_name;
             }
         }
-        $term->content = json_encode($content);
+        $term->orther = json_encode($orther);
         $term->save();
         return redirect('terms/'.$term->id.'/edit');
     }
@@ -117,21 +117,21 @@ class TermController extends Controller
                 $term->$value = $file_name;
             }
         }
-        //json content
+        //json orther
         $input = $request->except(array_merge(['_token','_method'],$term->fillable));
-        $content = [];
+        $orther = [];
         foreach ($input as $key => $value) {
             if($request->has($key)){
-                $content[$key] = $request->input($key);
+                $orther[$key] = $request->input($key);
             }
             if($request->hasFile($key)){
                 $file = $request->file($key);
                 $file_name = time().'.'.$file->extension();
                 $file->move(public_path('upload'),$file_name);
-                $content[$key] = $file_name;
+                $orther[$key] = $file_name;
             }
         }
-        $term->content = json_encode($content);
+        $term->orther = json_encode($orther);
         $term->save();
         return redirect('terms/'.$term->id.'/edit');
     }

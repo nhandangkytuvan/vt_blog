@@ -57,7 +57,9 @@
     </div>
 </div>
 @endsection('content')
-
+@section('realtime')
+    @include('layouts.searchMedia',['terms'=>$terms])
+@endsection('realtime')
 @foreach($medias as $key => $media)
     @include('layouts.modalDestroyMedia',['media'=>$media])
     @include('layouts.modalPopupMedia',['media'=>$media])

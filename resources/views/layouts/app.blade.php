@@ -12,8 +12,8 @@
 
     <!-- Styles -->
     @yield('css')
-    <link href="{{ asset('public/css/overlay.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/myapp.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/codepen.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @yield('js')
@@ -84,14 +84,14 @@
             <div class="col-md-3" id="menuTerm">
                 @yield('menu')
             </div>
-            <div class="col-md-7">
+            <div class="col-md-6">
                 @yield('content')
             </div>
-            <div class="col-md-2" id="realTime">
+            <div class="col-md-3" id="realTime">
                 @yield('realtime')
             </div>
         </div>
-        <nav class="navbar navbar-default navbar-fixed-bottom">
+        <nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
             <div class="container">
                 <ul class="nav navbar-nav pull-left">
                     <li><a href="javascript:;" data-toggle="modal" data-target="#myModalMenuTerm">MenuLeft</a></li>
