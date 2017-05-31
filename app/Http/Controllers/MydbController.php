@@ -18,7 +18,7 @@ class MydbController extends Controller
             $term_new->term_id = $term_old->term_id;
             $term_new->avatar = $term_old->term_avatar;
             $term_new->description = $term_old->term_description;
-            $term_new->content = json_encode(['keyword'=>$term_old->term_keyword,'meta'=>$term_old->term_meta]);
+            $term_new->orther = json_encode(['keyword'=>$term_old->term_keyword,'meta'=>$term_old->term_meta]);
             $term_new->save();
             echo 'success '.$term_old->term_name.'<br>';
         }
@@ -35,7 +35,8 @@ class MydbController extends Controller
             $post_new->term_id = $post_old->term_id;
             $post_new->avatar = $post_old->post_avatar;
             $post_new->description = $post_old->post_description;
-            $post_new->content = json_encode(['keyword'=>$post_old->post_keyword,'detail'=>$post_old->post_detail]);
+            $post_new->content = $post_old->post_detail;
+            $post_new->orther = json_encode(['keyword'=>$post_old->post_keyword]);
             $post_new->save();
             echo 'success '.$post_old->post_name.'<br>';
         }

@@ -30,6 +30,7 @@ class TermController extends Controller
      */
     public function create()
     {
+        $this->authorize('create', Term::class);
         $terms = App\Term::get();
         return view('terms.create',['terms'=>$terms]);
     }
@@ -144,6 +145,7 @@ class TermController extends Controller
      */
     public function destroy(Term $term)
     {
+        $this->authorize('delete', $term);
         $term->delete();
         File::delete(public_path('upload\\'.$term->avatar));
         DB::statement('ALTER TABLE terms AUTO_INCREMENT = 1');
