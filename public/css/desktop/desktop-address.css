@@ -1,0 +1,202 @@
+/**/
+.banner{
+    background-image: url('../../images/desktop2/term-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 452px;
+    padding-top: 400px;
+}
+/*search*/
+.home .row1{
+    background-color: #f1f1f1;
+}
+.home .row1 .flex1{
+    height: 52px;
+    padding:0px 15px;
+}
+.home .row1 .flex1col1 h5.color1{
+    color: #00639d;
+    padding-right: 5px;
+}
+.home .row1 .flex1col1 h5.color2{
+    color: #fa8f03;
+    font-weight: normal;
+}
+.home .row1 .flex1col2 i.bg1{
+    background-image: url('../../images/desktop2/home-2.png');
+    background-repeat: no-repeat;
+    background-position: -36px -5px;
+    width: 20px;
+    height: 19px;
+    margin-right: 5px;
+}
+.home .row1 .flex1col2 input{
+    outline: none;
+    border:1px solid #505050;
+    height: 30px;
+    padding-left: 10px;
+    margin-left: 10px;
+    color: #969595;
+    width: 200px;
+}
+.home .row1 .flex1col2 button{
+    outline: none;
+    box-shadow: none;
+    height: 30px;
+    background-color: #505050;
+    color: #fff;
+    width: 55px;
+    border:none;
+    cursor: pointer;
+}
+/**/
+main.term{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border:1px solid #e6e6e6;
+    padding:0px 10px;
+}
+main.term .flex0col1{
+    width: 688px;
+    border-right:1px solid #e6e6e6;
+    padding:10px 0px 0px 0px;
+}
+main.term .flex0col2{
+    width: 275px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+/**/
+main.term h1{
+    font-size: 16px;
+    color: #00639d;
+}
+main.term .flex0col1 .flex1{
+	margin-top: 15px;
+}
+main.term .flex0col1 .flex1col1{
+	width: 203px;
+}
+main.term .flex0col1 .flex1col2{
+	width: 500px;
+}
+main.term .flex0col1 .flex1col2 h4{
+	height: 34px;
+	line-height: 34px;
+	font-size: 14px;
+	color: #0e9faa;
+	padding-left: 10px;
+	background-color: #f2f2f2;
+	font-weight: normal;
+}
+main.term .flex0col1 .flex1col2 ul{
+	margin-top: 28px;
+	margin-bottom: 28px;
+	list-style: none;
+}
+main.term .flex0col1 .flex1col2 ul li{
+	color:#7f7f7f;
+	margin-bottom: 14px;
+} 
+main.term .flex0col1 .flex1col2 ul li h5{
+	font-size: 14px;
+	font-weight: normal;
+}
+main.term .flex0col1 .flex1col2 ul li h5 i{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	color: #fff;
+	text-align: center;
+	line-height: 15px;
+	font-size: 11px;
+	background-color: #eca419;
+	vertical-align: 1px;
+	margin-right: 10px;
+}
+main.term .flex0col1 .flex1col2 ul li h5 i.active{
+	background-color: #bebebe;
+}
+main.term .flex0col1 .flex2col1{
+	height: 38px;
+	width: 160px;
+	background-image: url('../../images/desktop2/icon-4.png');
+	background-position: 0px -1px;
+	background-repeat: no-repeat;
+	line-height: 38px;
+	color: #fff;
+	padding-left: 35px;
+	font-size: 12px;
+}
+main.term .flex0col1 .flex2col1:nth-child(2){
+	background-position: -175px -1px;
+}
+main.term .flex0col1 .flex2col1:nth-child(3){
+	background-position: -345px -1px;
+}
+main.term .flex0col1 .posts{
+	margin-top: 28px;
+}
+main.term .flex0col1 .post{
+	border-top: 1px solid #dfdfdf;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	padding-right: 10px;
+}
+main.term .flex0col1 .post h3{
+	color: #66667d;
+	font-size: 18px;
+	font-weight: normal;
+}
+main.term .flex0col1 .post span{
+	font-size: 12px;
+	color: #a3a3ab;
+}
+main.term .flex0col1 .post p{
+	margin-top: 10px;
+	color: #6d6d6d;
+	line-height: 22px;
+}
+main.term .flex0col1 .post p a{
+	display: inline-block;
+	color: red;
+}
+/**/
+main.term a:hover{
+	text-decoration: underline;
+}
+.address.term .flex0col1 >h3:nth-child(2){
+	margin:20px auto;
+	margin-right: 20px;
+}
+.address.term .flex0col1 >h2:nth-child(3){
+	font-size: 16px;
+	margin:10px auto;
+	font-weight: bold;
+	font-size: 12px;
+}
+.address.term .address-bus{
+	padding:20px 0px;
+	border-top: 1px solid #eaeaea;
+}
+.address.term .address-bus h3{
+	color: rgb(191,143,0);
+	font-size: 16px;
+	margin:10px auto;
+}
+.address.term .address-bus h4 a{
+	color: red;
+	font-size: 12px;
+}
+.address.term .address-bus h5{
+	margin:15px auto;
+	color: rgb(192,0,0);
+	font-size: 12px;
+}
+.address.term .address-bus .flex1col1{
+	width: 100px;
+}
+/**/
+.address.term a:hover{
+	text-decoration: underline;
+}

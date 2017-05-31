@@ -19,7 +19,7 @@ class TermController extends Controller
      */
     public function index()
     {
-        $terms = App\Term::get();
+        $terms = Term::get();
         return view('terms.index',['terms'=>$terms]);
     }
 
@@ -28,10 +28,10 @@ class TermController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $this->authorize('create', Term::class);
-        $terms = App\Term::get();
+        $terms = Term::get();
         return view('terms.create',['terms'=>$terms]);
     }
 
@@ -43,7 +43,7 @@ class TermController extends Controller
      */
     public function store(StoreTerm $request)
     {
-        $term = new App\Term;
+        $term = new Term;
         $term->user_id = Auth::id();
         foreach ($term->fillable as $key => $value) {
             if($request->has($value)){
@@ -94,7 +94,7 @@ class TermController extends Controller
      */
     public function edit(Term $term)
     {
-        $terms = App\Term::get();
+        $terms = Term::get();
         return view('terms.edit',['term'=>$term,'terms'=>$terms]);
     }
 
@@ -147,6 +147,8 @@ class TermController extends Controller
     {
         $this->authorize('delete', $term);
         $term->delete();
+        $term->post()->update('term_id',0);
+        $term->media()->update('term_id',0);
         File::delete(public_path('upload\\'.$term->avatar));
         DB::statement('ALTER TABLE terms AUTO_INCREMENT = 1');
         return redirect('terms');

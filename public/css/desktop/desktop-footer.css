@@ -1,0 +1,116 @@
+footer .container2{width: 1290px;margin:0px auto;}
+footer .row1{
+	background-color: #00639d;
+	padding-top: 30px;
+	color: #fff;
+	padding-bottom: 25px;
+}
+footer .row1 .flex1col1{
+	width: 300px;
+	border-right: 1px solid #fff;
+}
+footer .row1 .flex1col1 .web-name{
+	font-size: 13px;
+	margin-top: 17px;
+	font-weight: 600;
+	color: #fefefe;
+}
+footer .row1 .flex1col1 .web-slogan{
+	margin-top: 16px;
+	font-size: 11px;
+	font-weight: 100;
+	color: #fefefe;
+}
+footer .row1 .flex1col3{
+	width: 600px;
+	padding-left: 20px;
+	/*border-left: 1px solid #fff;*/
+}
+footer .row1 .flex1col3 .web-contact{
+	font-size: 18px;
+	font-weight: 600;
+}
+footer .row1 .flex1col3 .flex2{
+	margin-top: 23px;
+	width: 430px;
+}
+footer .row1 .flex1col3 .flex2col1{
+	width: 222px;
+}
+footer .row1 .flex1col3 .flex3col1{
+	margin-right: 5px;
+}
+footer .row1 .flex1col3 .flex3col1 i{
+	display: block;
+	width: 36px;
+	height: 36px;
+	background-image: url('img/sua-6.png');
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+footer .row1 .flex1col3 .flex3col2 >div >div:first-child{
+	font-size: 12px;
+}
+footer .row1 .flex1col3 .flex3col2 >div >div:last-child{
+	font-size: 35px;
+}
+footer .row1 .flex1col3 .flex2col2 .flex3col1 i{
+	background-position: -44px 0px;
+}
+footer .row1 .flex1col3 .flex2col2{
+	/*width: 130px;*/
+}
+footer .row1 .flex1col3 .flex4{
+	margin-top: 20px;
+}
+footer .row1 .flex1col3 .flex4 a{
+	background-color: #71ebfe;
+	height: 38px;
+	border-radius: 5px;
+	color: #00639d;padding:0px 8px;
+}
+footer .row1 .flex1col3 .flex4 a.active{
+	background-color: #edfeb7;
+}
+.row1 .flex1col3 .flex4 a:hover{
+	background-color: #edfeb7;
+}
+footer .row1 .flex1col3 .flex4 a i{
+	display: block;
+	width: 22px;height: 23px;
+	background-image: url('img/sua-6.png');
+	background-position: -22px -61px;
+	background-repeat: no-repeat;
+}
+footer .row1 .flex1col3 .flex4 a i.bg4{
+	background-position: -58px -61px;
+}
+footer .row1 .flex1col3 .flex4 a i.bg5{
+	background-position: -90px -61px;
+	width: 23px;height: 25px;
+}
+footer .row1 .flex1col3 .flex4col1{
+	width: 32%;
+}
+footer .row1 .flex1col3 .flex4col1 a span:nth-child(1){margin-right: 10px;}
+footer .row1 .flex1col3 div.web-address{
+	font-size: 25px;
+	margin-top: 30px;
+}
+/**/
+footer .row2{
+	background-color: #014872;
+	height: 14px;
+}
+footer a:hover{
+	text-decoration: underline;
+}
+/**/
+.footer-status h5{
+	font-weight: normal;
+	font-size: 20px;
+}
+/**/
+div.menu-footer{background-color: #0985da;height: 50px;padding:10px 0px;margin-top: 30px;}
+div.menu-footer .flex1col1{width: 20%;border-right: 1px solid #fff;}
+div.menu-footer .flex1col1{height: 30px;text-transform: uppercase;display: flex;width: 100%;color: #fff;padding:0px 10px;text-align: center;}

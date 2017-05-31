@@ -12,9 +12,9 @@
 
     <!-- Styles -->
     @yield('css')
-    <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/myapp.css') }}" rel="stylesheet">
-    <link href="{{ asset('public/css/codepen.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/app/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/app/myapp.css') }}" rel="stylesheet">
+    <link href="{{ asset('public/css/app/codepen.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
     @yield('js')
     <script>
@@ -118,15 +118,15 @@
     @yield('modal')
     <!-- Scripts -->
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script src="{{ asset('public/js/app.js') }}"></script>
-    <script src="{{ asset('public/js/jquery.form.min.js') }}"></script>
-    <script src="{{ asset('public/js/jquery.popupoverlay.min.js') }}"></script>
-    <script src="{{ asset('public/js/jquery-scrolltofixed-min.js') }}"></script>
-    <script src="{{ asset('public/js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
-    <script src="{{ asset('public/js/autosize/dist/autosize.min.js') }}"></script>
-    <script src="{{ asset('public/js/clipboard/dist/clipboard.min.js') }}"></script>
-    <script src="{{ asset('public/js/myclipboard.js') }}"></script>
-    <script src="{{ asset('public/js/overlay.js') }}"></script>
-    <script src="{{ asset('public/js/myapp.js') }}"></script>
+    <script src="{{ asset('public/js/app/app.js') }}"></script>
+    <script src="{{ asset('public/js/app/jquery.form.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/jquery.popupoverlay.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ asset('public/js/app/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/autosize/dist/autosize.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/clipboard/dist/clipboard.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/myclipboard.js') }}"></script>
+    <script src="{{ asset('public/js/app/overlay.js') }}"></script>
+    <script src="{{ asset('public/js/app/myapp.js') }}"></script>
 </body>
 </html>

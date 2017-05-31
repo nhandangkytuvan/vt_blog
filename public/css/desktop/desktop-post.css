@@ -1,0 +1,290 @@
+.banner{
+    background-image: url('../../images/desktop2/term-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 452px;
+    padding-top: 400px;
+}
+/*search*/
+.home .row1{
+    background-color: #f1f1f1;
+}
+.home .row1 .flex1{
+    height: 52px;
+    padding:0px 15px;
+}
+.home .row1 .flex1col1 h5.color1{
+    color: #00639d;
+    padding-right: 5px;
+}
+.home .row1 .flex1col1 h5.color2{
+    color: #fa8f03;
+    font-weight: normal;
+}
+/**/
+.home .row1 .flex1col1 >div>div:first-child i{
+    font-size: 30px;
+    color: #ff812d;
+}
+.home .row1 .flex1col1{
+    color: #242424;
+}
+.home .row1 .flex1col1 >div>div{
+    margin-right: 5px;
+}
+/**/
+.home .row1 .flex1col2 i.bg1{
+    background-image: url('../../images/desktop2/home-2.png');
+    background-repeat: no-repeat;
+    background-position: -36px -5px;
+    width: 20px;
+    height: 19px;
+    margin-right: 5px;
+}
+.home .row1 .flex1col2 input{
+    outline: none;
+    border:1px solid #505050;
+    height: 30px;
+    padding-left: 10px;
+    margin-left: 10px;
+    color: #969595;
+    width: 200px;
+}
+.home .row1 .flex1col2 button{
+    outline: none;
+    box-shadow: none;
+    height: 30px;
+    background-color: #505050;
+    color: #fff;
+    width: 55px;
+    border:none;
+    cursor: pointer;
+}
+/**/
+main.term{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    border:1px solid #e6e6e6;
+    padding:0px 10px;
+}
+main.term .flex0col1{
+    width: 688px;
+    border-right:1px solid #e6e6e6;
+    padding:10px 0px 0px 0px;
+}
+main.term .flex0col2{
+    width: 275px;
+    padding-top: 10px;
+}
+/**/
+main.term.post h1{
+    font-size: 16px;
+    color: #00639d;
+}
+main.term.post .post-footer{
+    padding-right: 15px;
+}
+main.term.post .post-footer .order1 p{
+    line-height: 20px;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+main.term.post .post-footer .order1 p span{
+    color: red;
+    font-weight: bold;
+}
+main.term.post .post-footer .order1 p{
+    margin-top: 8px;
+}
+main.term.post .post-footer .order1 p strong a{
+    color: red;
+}
+main.term.post .post-footer .order1 ul{
+    list-style: none;
+    margin-top: 15px;
+}
+main.term.post .post-footer .order1 ul li{
+    margin-bottom: 10px;
+}
+/**/
+main.term.post .post-footer .order2{
+    margin-top: 20px;
+}
+main.term.post .post-footer .order2 h2{
+    font-size: 18px;
+}
+main.term.post .post-footer .order2 .flex1{
+    margin-top: 20px;
+}
+main.term.post .post-footer .order2 .flex1col1{
+    width:33.33%;
+    border:1px solid #e6e6e6;
+    background-color: #f7f7f7;
+    height: 200px;
+    padding:0px 5px;
+    color: #000;
+}
+main.term.post .post-footer .order2 .flex1col1:nth-child(n+4){
+    border-top: none;
+}
+main.term.post .post-footer .order2 .flex1col1:nth-child(2){
+    border-color: #02b9c7;
+}
+main.term.post .post-footer .order2 .flex1col1:nth-child(5){
+    border-left: none;
+    border-right: none;
+}
+main.term.post .post-footer .order2 .flex1col1 div i{
+    display: inline-block;
+    width: 78px;
+    height: 75px;
+    background-image: url('../../images/desktop2/icon-12.png');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+main.term.post .post-footer .order2 .flex1col1 div i.bg2{
+    background-position: -332px 0px;
+}
+main.term.post .post-footer .order2 .flex1col1 div i.bg3{
+    background-position: -665px 0px;
+}
+main.term.post .post-footer .order2 .flex1col1 div i.bg4{
+    background-position: 0px -218px;
+}
+main.term.post .post-footer .order2 .flex1col1 div i.bg5{
+    background-position: -332px -218px;
+}
+main.term.post .post-footer .order2 .flex1col1 div i.bg6{
+    background-position: -665px -218px;
+}
+main.term.post .post-footer .order2 .flex1col1.active{
+    background-color: #02b9c7;
+    color: #fff;
+}
+main.term.post .order2 .flex1col1 div:nth-child(2){
+    font-size: 14px;
+    margin-top: 8px;
+    font-weight: bold;
+}
+main.term.post .order2 .flex1col1 div:nth-child(n+3){
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 8px;
+}
+/**/
+main.term.post .post-related .flex2col1{
+    width: 50%;
+    padding:0px 10px;
+}
+main.term.post .post-related ul{
+    list-style:none;
+    margin-top: 30px;
+    padding-left: 0px;
+}
+main.term.post .post-related ul li{
+    margin-bottom: 8px;
+}
+main.term.post .post-related ul li h5{
+    position: relative;padding-left: 15px;
+}
+main.term.post .post-related ul li h5 i{
+    font-size: 5px;
+    vertical-align: 3px;
+    padding-right: 10px;
+    position: absolute;
+    left: 0px;
+    top:6px;
+}
+main.term.post .post-related ul li h5:hover i{
+    color: red;
+}
+main.term.post .post-related ul li h5 a{
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+}
+main.term.post .post-related ul li h5 a:hover{
+    color: red;
+}
+/**/
+main.term.post .post-number{
+    margin-top: 30px;
+    background-color: #f7f7f7;
+    padding:20px 15px;
+    border:1px solid #e6e6e6;
+}
+main.term.post .post-number .flex3{
+    margin-top: 10px;
+}
+main.term.post .post-number .flex3col1 p span{
+    display: inline-block;
+    background-color: #ee5f00;
+    color: #fff;
+    font-weight: bold;
+    font-size: 34px;
+    padding:0px 5px;
+    vertical-align: 18px;
+    height: 60px;
+    line-height: 60px;
+}
+main.term.post .post-number .flex3col2 form input{
+    height: 60px;
+    line-height: 60px;
+    padding:0px 10px;
+    min-width: 340px;
+    border:1px solid #e6e6e6;
+}
+main.term.post .post-number .flex4col2{
+    background-color: #02b9c7;
+    color: #fff;
+    padding:0px 5px;
+}
+main.term.post .post-number .flex4col2 h3 a{
+    display: block;
+}
+main.term.post .post-number .flex4col2 h3 i{
+    font-size: 25px;
+}
+main.term.post .post-number .flex4col2 h4{
+    font-weight: normal;
+    font-size: 12px;
+}
+/**/
+main.term.post a:hover{
+    text-decoration: underline;
+}
+main.term.post .post-footer .order2 .flex1col1:hover{
+    cursor: pointer;
+}
+main.term.post .post-footer .order2 .flex1col1:hover a{
+    color: red;
+}
+
+/**/
+main.term.post .post-description{
+    margin-bottom: 15px;
+    margin-top: 20px;
+    line-height: 20px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+main.term.post .post-detail{
+    padding-right: 15px;
+    margin-bottom: 20px;
+}
+main.term.post .post-detail ul,main.term.post .post-detail ol{
+    padding-left: 20px;
+}
+main.term.post .post-detail ul li,main.term.post .post-detail ol li{
+    margin-bottom: 5px;
+}
+main.term.post .post-detail p{
+    margin-bottom: 10px;
+}
+/**/
+div.tool-facebook{
+    margin:10px auto;
+}
+._2tga._49ve{
+    border-radius: 2px;
+}

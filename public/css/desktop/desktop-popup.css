@@ -1,0 +1,5 @@
+#popup-desktop >div{background-image: url('img/popup-desktop.png'); background-repeat: no-repeat; background-position: 0px 0px; height: 255px; width: 469px; }
+#popup-desktop >div a.popup-desktop_close{width: 40px;height: 10px; right: 7px; top:5px; }
+#popup-desktop >div a.popup-desktop_close:hover{cursor: pointer; }
+#popup-desktop >div a.tuvan1{width: 95px; height: 30px; right: 159px; top: 209px; }
+#popup-desktop >div a.tuvan2{width: 95px; height: 30px; right: 58px; top: 209px; }
