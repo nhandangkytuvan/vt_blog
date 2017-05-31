@@ -101,16 +101,16 @@
                     </div>
                 </div>
                 <div class="flex1col1 flex align-items-center justify-content-center">
-                    <div><a href="{{ APITerm::getUrlByID(28) }}" class="text-container-center hvr-fade" title="Sùi mào gà">Sùi mào gà</a></div>
+                    <div><a href="{{ url('ve-chung-toi') }}" class="text-container-center hvr-fade" title="Giới thiệu phòng khám">Giới thiệu phòng khám</a></div>
                 </div>
                 <div class="flex1col1 flex align-items-center justify-content-center">
-                    <div><a href="{{ APITerm::getUrlByID(29) }}" class="text-container-center hvr-fade" title="Bệnh lậu">Bệnh lậu</a></div>
+                    <div><a href="{{ APITerm::getUrlByID(32) }}" class="text-container-center hvr-fade" title="Kỹ thuật đặc biệt">Kỹ thuật đặc biệt</a></div>
                 </div>
                 <div class="flex1col1 flex align-items-center justify-content-center">
-                    <div><a href="{{ APITerm::getUrlByID(30) }}" class="text-container-center hvr-fade" title="Giang mai">Giang mai</a></div>
+                    <div><a href="{{ APITerm::getUrlByID(30) }}" class="text-container-center hvr-fade" title="Sếp số hẹn khám">Sếp số hẹn khám</a></div>
                 </div>
                 <div class="flex1col1 flex align-items-center justify-content-center">
-                    <div><a href="{{ APITerm::getUrlByID(31) }}" class="text-container-center hvr-fade" title="Mụn rộp sinh dục">Mụn rộp sinh dục</a></div>
+                    <div><a href="{{ url('dia-chi-phong-kham') }}" class="text-container-center hvr-fade" title="Địa chỉ phòng khám">Địa chỉ phòng khám</a></div>
                 </div>
             </div>
         </div>

@@ -111,11 +111,11 @@
 					<div class="nth2">
 						<table class="width-100">
 							<tr>
-								<td class="td1"><div>Phòng khám<br>đào tạo</div></td>
+								<td class="td1 bg1"><div>Phòng khám<br>đào tạo</div></td>
 								<td class="td2">
 									<div>Chân thành, chi phí hợp lý, sáng tạo, chuyên nghiệp</div>
 								</td>
-								<td class="td3">
+								<td class="td3 bg2">
 									<div>Tôn chỉ<br>thành lập</div>
 								</td>
 								<td class="td4">
@@ -123,11 +123,11 @@
 								</td>
 							</tr>
 							<tr>
-								<td class="td1"><div>Phương châm<br>phát triển</div></td>
+								<td class="td1 bg2"><div>Phương châm<br>phát triển</div></td>
 								<td class="td2">
 									<div>Phòng khám chuyên khoa nhận được sự tôn trọng của người dân</div>
 								</td>
-								<td class="td3">
+								<td class="td3 bg1">
 									<div>Phương châm<br>quản lý</div>
 								</td>
 								<td class="td4">
@@ -135,11 +135,11 @@
 								</td>
 							</tr>
 							<tr>
-								<td class="td1"><div>Phương châm<br>dùng người</div></td>
+								<td class="td1 bg1"><div>Phương châm<br>dùng người</div></td>
 								<td class="td2">
 									<div>Kiên quyết không dùng người không có y đức</div>
 								</td>
-								<td class="td3">
+								<td class="td3 bg2">
 									<div>Phương châm<br>dịch vụ</div>
 								</td>
 								<td class="td4">
@@ -379,7 +379,7 @@
 				</div>
 			</div>
 			<div class="row9">
-				<div class="nth1 text-center text-uppercase"><span>Phòng khám nào ở Hà Nội chữa bệnh xã hội tốt?</span>    <span>Vấn đề được quan tâm nhiều nhất</span></div>
+				<div class="nth1 text-center text-uppercase"><span>Phòng khám nào ở Hà Nội chữa bệnh xã hội tốt?</span>&nbsp;&nbsp;&nbsp;&nbsp;<span>Vấn đề được quan tâm nhiều nhất</span></div>
 				<div class="dis-table table1 width-100">
 					<a href="#" class="table-cell cell1">Phòng khám nào ở Hà Nội uy tín?</a>
 					<a href="#" class="table-cell cell2">Xếp hạng phòng khám chữa bệnh xã hội ở Hà Nội</a>

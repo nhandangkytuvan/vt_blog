@@ -30,11 +30,13 @@ div.global2 .nth2 a{display: block;background-color: #f6302f;color: #fff;border-
 .home .row2 .flex1{margin-top: 26px;}
 .home .row2 .nth1{padding:0px 30px;}
 .home .row2 table{border-collapse: 0px;border-spacing: 0px;}
-.home .row2 table .td1>div{background-color: #64b4e5;border-radius: 3px;color: #fff;padding:5px;text-align: center;width: 100px;}
-.home .row2 table .td3>div{background-color: #0080d9;border-radius: 3px;color: #fff;padding:5px;text-align: center;width: 100px;}
+.home .row2 table .td1>div{border-radius: 3px;color: #fff;padding:5px;text-align: center;width: 100px;}
+.home .row2 table .td3>div{border-radius: 3px;color: #fff;padding:5px;text-align: center;width: 100px;}
 .home .row2 table .td2,.td4{padding:0px 10px;}
 .home .row2 table td>div{margin-bottom: 10px;margin-top: 10px;}
 .home .row2 table td{border-bottom: 1px solid #cecfcf;}
+.home .row2 table .bg1>div{background-color: #64b4e5;}
+.home .row2 table .bg2>div{background-color: #0080d9;}
 /**/
 .home .row3{margin-top: 45px;}
 .home .row3 .flex1{margin:12px 20px 12px 20px;}
@@ -70,7 +72,7 @@ div.global2 .nth2 a{display: block;background-color: #f6302f;color: #fff;border-
 .home .row6{margin-top: 45px;}
 .home .row6 .flex1{margin-top: 20px;}
 .home .row6 .flex1col1{border:1px solid #d9d9d9;width: 219px;}
-.home .row6 .flex1col1 .pos-absolute{top:0px;left: 0px;display: inline-block;padding:8px;color: #fff;background-image: url('img/home-19.png');}
+.home .row6 .flex1col1 .pos-absolute{top:0px;left: 0px;display: inline-block;padding:8px;color: #fff;background-image: url('img/home-19.png');font-size: 12px;}
 .home .row6 .flex1col1 .des1{padding:16px 10px 10px 10px;text-align: justify;}
 /**/
 .home .row7{margin-top: 45px;}
