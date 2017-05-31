@@ -15,6 +15,12 @@ $(document).ready(function() {
         toolbar2: 'print preview media forecolor backcolor fontsizeselect link image code responsivefilemanager fullscreen',
         image_advtab: true,
         inline_styles: true,
+        filemanager_crossdomain: true,
+        external_filemanager_path:"http://localhost/vt_blog/filemanager/",
+        external_plugins: { "filemanager" : "http://localhost/vt_blog/public/js/global/tinymce/js/tinymce/plugins/responsivefilemanager/plugin.min.js"},
+        content_css: [
+            'http://localhost/vt_blog/public/css/app/codepen.min.css'
+        ],
     });	
     autosize($("textarea.autosize"));
 });
