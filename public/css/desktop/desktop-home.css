@@ -57,10 +57,10 @@ div.global2 .nth2 a{display: block;background-color: #f6302f;color: #fff;border-
 .home .row5{margin-top: 45px;}
 .home .row5 .flex1col1{width: 475px;margin-top: 33px;}
 .home .row5 .flex1col1:nth-child(2n+2){width: 500px;}
-.home .row5 .flex1col1 .circle1{background-image: url('img/home-11.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 30px;}
-.home .row5 .flex1col1 .circle2{background-image: url('img/home-12.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 30px;}
-.home .row5 .flex1col1 .circle3{background-image: url('img/home-13.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 30px;}
-.home .row5 .flex1col1 .circle4{background-image: url('img/home-14.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 30px;}
+.home .row5 .flex1col1 .circle1{background-image: url('img/home-11.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 50px;}
+.home .row5 .flex1col1 .circle2{background-image: url('img/home-12.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 50px;}
+.home .row5 .flex1col1 .circle3{background-image: url('img/home-13.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 50px;}
+.home .row5 .flex1col1 .circle4{background-image: url('img/home-14.png');width: 94px;height: 119px;text-align: center;text-transform: uppercase;color: #fff;padding-top: 50px;}
 .home .row5 .flex1col1 .heading1{text-transform: uppercase;color: #0080d9;}
 .home .row5 .flex1col1 .heading2{text-transform: uppercase;color: #17a281;}
 .home .row5 .flex1col1 .heading3{text-transform: uppercase;color: #e15f5f;}
@@ -113,8 +113,8 @@ div.global2 .nth2 a{display: block;background-color: #f6302f;color: #fff;border-
 
 
 
-
-
+/*effect*/
+div.global2 .nth2 a:hover{text-decoration: underline;background-color: #e7c549;}
 
 
 

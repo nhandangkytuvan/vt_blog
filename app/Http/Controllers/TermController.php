@@ -6,11 +6,13 @@ use App\Http\Requests\StoreTerm;
 use App\Http\Requests\UpdateTerm;
 use App\Term;
 use DB,File,Auth,App,Session;
+use Jenssegers\Agent\Agent;
+
 class TermController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except('view');
     }
     /**
      * Display a listing of the resource.
@@ -152,5 +154,23 @@ class TermController extends Controller
         File::delete(public_path('upload\\'.$term->avatar));
         DB::statement('ALTER TABLE terms AUTO_INCREMENT = 1');
         return redirect('terms');
+    }
+
+
+    // show online
+    public function view($term_link,Request $request){
+        $array_link = explode('-',$term_link);
+        $id = end($array_link);
+        $term = Term::find($id);
+        if(!$term){
+            return redirect('/');
+        }
+        // -----------
+        $agent = new Agent();
+        if($agent->isDesktop()){
+            return view('terms.view',['term'=>$term]); 
+        }else{
+            
+        }
     }
 }

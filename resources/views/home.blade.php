@@ -315,7 +315,7 @@
 					<div class="flex1col1">
 						<div class="pos-relative">
 							<img src="{{ asset('public/css/desktop/img/home-18.png') }}" alt="" class="center-block img-responsive">
-							<span class="pos-absolute text-center">Chất lượng<br>hàng đầu</span>
+							<span class="pos-absolute text-center">Dịch vụ<br>nhân văn</span>
 						</div>
 						<div class="des1">
 							Đề cao dịch vụ nhân văn. Đề xướng phương châm dịch vụ “một bệnh nhân, một bác sĩ, một y tá”, xây dựng đường dây nóng bác sĩ tư vấn 24h.

@@ -39,4 +39,13 @@ class APITerm {
             return url('/');
         }
     }
+    // get link term by object
+    public static function getUrlByObj($term = null)
+    {
+        if($term){
+            return url($term->alias.'-'.$term->id);
+        }else{
+            return url('/');
+        }
+    }
 }
