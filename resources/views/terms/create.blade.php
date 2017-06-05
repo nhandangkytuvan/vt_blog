@@ -1,10 +1,4 @@
-@extends('layouts.app')
 
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-
-@section('content')
 <form method="post"  enctype="multipart/form-data" action="{{ url('terms') }}">
     {{ csrf_field() }}
     <div class="panel panel-default">
@@ -61,4 +55,8 @@
         </div>
     </div>
 </form>
-@endsection('content')
+<script>
+    $(document).ready(function() {
+        autosize($("textarea.autosize"));
+    });
+</script>

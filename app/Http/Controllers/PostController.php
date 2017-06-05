@@ -140,7 +140,7 @@ class PostController extends Controller
         }
         $post->orther = json_encode($orther);
         $post->save();
-        return redirect('posts/'.$post->id.'/edit'); 
+        return back(); 
     }
 
     /**

@@ -1,10 +1,4 @@
-@extends('layouts.app')
 
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-
-@section('content')
     <div class="panel panel-default">
         <div class="panel-heading">Sửa tài khoản</div>
         <div class="panel-body">
@@ -49,4 +43,4 @@
             </form>
         </div>
     </div>
-@endsection
+

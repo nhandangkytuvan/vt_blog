@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-@section('content')
+
 <form method="post"  enctype="multipart/form-data" action="{{ url('configs/'.$config->id) }}">
     {{ csrf_field() }}
     {{ method_field('PUT') }}
@@ -43,4 +39,3 @@
         </div>
     </div>
 </form>
-@endsection('content')

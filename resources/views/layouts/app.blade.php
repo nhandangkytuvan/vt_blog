@@ -24,7 +24,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" ng-app="myApp">
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
@@ -80,18 +80,8 @@
                 </div>
             </div>
         </nav>
-        <div class="container">
-            <div class="col-md-3" id="menuTerm">
-                @yield('menu')
-            </div>
-            <div class="col-md-6">
-                @yield('content')
-            </div>
-            <div class="col-md-3" id="realTime">
-                @yield('realtime')
-            </div>
-        </div>
-        <nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
+        @yield('content')
+        <!-- <nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
             <div class="container">
                 <ul class="nav navbar-nav pull-left">
                     <li><a href="javascript:;" data-toggle="modal" data-target="#myModalMenuTerm">MenuLeft</a></li>
@@ -100,10 +90,10 @@
                     <li><a href="javascript:;">MenuRight</a></li>
                 </ul>
             </div>
-        </nav>
+        </nav> -->
     </div>
     <!-- Modal -->
-     <div class="modal fade" id="myModalMenuTerm">
+    <!-- <div class="modal fade" id="myModalMenuTerm">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body" style="padding:0;margin-bottom: -23px;">
@@ -113,12 +103,11 @@
                 </div>
             </div>
         </div>
-     </div>
-
-    @yield('modal')
+    </div> -->
     <!-- Scripts -->
-    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script src="{{ asset('public/js/app/app.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
     <script src="{{ asset('public/js/app/jquery.form.min.js') }}"></script>
     <script src="{{ asset('public/js/app/jquery.popupoverlay.min.js') }}"></script>
     <script src="{{ asset('public/js/app/jquery-scrolltofixed-min.js') }}"></script>
@@ -126,7 +115,8 @@
     <script src="{{ asset('public/js/app/autosize/dist/autosize.min.js') }}"></script>
     <script src="{{ asset('public/js/app/clipboard/dist/clipboard.min.js') }}"></script>
     <script src="{{ asset('public/js/app/myclipboard.js') }}"></script>
-    <script src="{{ asset('public/js/app/overlay.js') }}"></script>
+    <!-- <script src="{{ asset('public/js/app/overlay.js') }}"></script> -->
+    <script src="{{ asset('public/js/app/myangular.js') }}"></script>
     <script src="{{ asset('public/js/app/myapp.js') }}"></script>
 </body>
 </html>

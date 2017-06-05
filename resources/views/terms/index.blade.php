@@ -1,12 +1,6 @@
-@extends('layouts.app')
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-@section('content')
+
 <div class="panel panel-default">
-    <div class="panel-heading text-center">
-        Danh sách
-    </div>
+    <div class="panel-heading text-center">Danh sách</div>
     <table class="table table-bordered">
         <tr class="active">
             <td>ID</td>
@@ -41,7 +35,7 @@
                                     </a> 
                                 </li> 
                                 <li>
-                                    <a href="{{ url('terms/'.$term->id.'/edit') }}">
+                                    <a href="#!{{ url('terms/'.$term->id.'/edit') }}">
                                         <span class="glyphicon glyphicon-pencil"></span> Sửa danh mục
                                     </a> 
                                 </li> 
@@ -59,8 +53,4 @@
         @endforeach
     </table>
 </div>
-@endsection('content')
 
-@foreach($terms as $key => $term)
-    @include('layouts.modalDestroyTerm',['term'=>$term])
-@endforeach

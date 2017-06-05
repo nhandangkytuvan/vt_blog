@@ -1,8 +1,4 @@
-@extends('layouts.app')
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-@section('content')
+
 <form method="post"  enctype="multipart/form-data" action="{{ url('terms/'.$term->id) }}">
     {{ csrf_field() }}
     {{ method_field('PUT') }}
@@ -48,15 +44,15 @@
             @php $orther = json_decode($term->orther,true);@endphp
             <div class="form-group">
                 <label class="control-label">Mô tả</label>
-                <textarea type="text" class="form-control autosize" name="description">{{ $term->description }}</textarea>
+                <textarea type="text" class="form-control autosize" name="description">{!! $term->description !!}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Keyword</label>
-                <textarea type="text" class="form-control autosize" name="keyword">{{ isset($orther['keyword']) ? $orther['keyword'] : '' }}</textarea>
+                <textarea type="text" class="form-control autosize" name="keyword">{!! isset($orther['keyword']) ? $orther['keyword'] : '' !!}</textarea>
             </div>
             <div class="form-group">
                 <label class="control-label">Meta</label>
-                <textarea type="text" class="form-control autosize" name="meta">{{ isset($orther['meta']) ? $orther['meta'] : '' }}</textarea>
+                <textarea type="text" class="form-control autosize" name="meta">{!! isset($orther['meta']) ? $orther['meta'] : '' !!}</textarea>
             </div>
             <div class="form-group">
                 <button class="btn btn-success" type="submit"><span class="fa fa-puzzle-piece"></span>  Sửa danh mục</button> 
@@ -64,4 +60,9 @@
         </div>
     </div>
 </form>
-@endsection('content')
+<script>
+    $(document).ready(function() {
+        autosize($("textarea.autosize"));
+    });
+</script>
+

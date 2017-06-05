@@ -1,9 +1,5 @@
-@extends('layouts.app')
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-@section('content')
-<form method="post"  enctype="multipart/form-data" action="{{ url('meidas/'.$media->id) }}">
+
+    <form method="post"  enctype="multipart/form-data" action="{{ url('meidas/'.$media->id) }}">
     {{ csrf_field() }}
     {{ method_field('PUT') }}
     <div class="panel panel-default">
@@ -49,5 +45,5 @@
             </div>
         </div>
     </div>
-</form>
-@endsection('content')
+    </form>
+

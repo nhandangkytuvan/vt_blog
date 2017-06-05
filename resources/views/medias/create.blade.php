@@ -1,11 +1,5 @@
-@extends('layouts.app')
 
-@section('menu')
-    @include('layouts.menuUserAdmin')
-@endsection('menu')
-
-@section('content')
-<form method="post"  enctype="multipart/form-data" action="{{ url('medias') }}">
+    <form method="post"  enctype="multipart/form-data" action="{{ url('medias') }}">
     {{ csrf_field() }}
     <div class="panel panel-default">
         <div class="panel-heading text-center">Tạo phương tiện</div>
@@ -50,5 +44,4 @@
             </div>
         </div>
     </div>
-</form>
-@endsection('content')
+    </form>
