@@ -1,4 +1,3 @@
-
 <div class="panel panel-default">
     <div class="panel-heading text-center">Danh sách</div>
     <table class="table table-bordered">

@@ -140,7 +140,9 @@ class PostController extends Controller
         }
         $post->orther = json_encode($orther);
         $post->save();
-        return back(); 
+        //return blade edit
+        $terms = App\Term::get();
+        return view('posts.edit',['post'=>$post,'terms'=>$terms]);
     }
 
     /**
