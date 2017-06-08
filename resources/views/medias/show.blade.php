@@ -1,5 +1,4 @@
-<div class="modal fade" tabindex="-{{ $media->id }}" role="dialog" id="modalPopupMedia{{ $media->id }}" data-backdrop="static">
-    <div class="modal-dialog modal-lg" role="document">
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -25,5 +24,3 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->

@@ -155,8 +155,12 @@ class TermController extends Controller
         DB::statement('ALTER TABLE terms AUTO_INCREMENT = 1');
         return redirect('terms');
     }
-
-
+    //
+    //
+    public function delete(Term $term)
+    {
+        return view('terms.delete',['term'=>$term]);
+    }
     // show online
     public function view($term_link,Request $request){
         $array_link = explode('-',$term_link);

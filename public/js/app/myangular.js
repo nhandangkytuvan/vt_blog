@@ -14,6 +14,11 @@ app.config(function($routeProvider) {
             return urlHome+"terms/"+routeParams.id+"/edit";
         }
     })
+    .when("/terms/:id/delete", {
+        templateUrl : function(routeParams){
+            return urlHome+"terms/"+routeParams.id+"/delete";
+        }
+    })
     //posts
     .when("/posts:query?", {
         templateUrl : function(routeParams){
@@ -28,6 +33,11 @@ app.config(function($routeProvider) {
             return urlHome+"posts/"+routeParams.id+"/edit";
         }
     })
+    .when("/posts/:id/delete", {
+        templateUrl : function(routeParams){
+            return urlHome+"posts/"+routeParams.id+"/delete";
+        }
+    })
     //medias
     .when("/medias:query?", {
         templateUrl : function(routeParams){
@@ -40,6 +50,11 @@ app.config(function($routeProvider) {
     .when("/medias/:id/edit", {
         templateUrl : function(routeParams){
             return urlHome+"medias/"+routeParams.id+"/edit";
+        }
+    })
+    .when("/medias/:id/delete", {
+        templateUrl : function(routeParams){
+            return urlHome+"medias/"+routeParams.id+"/delete";
         }
     })
     //configs

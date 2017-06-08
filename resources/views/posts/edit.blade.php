@@ -1,4 +1,8 @@
-
+@extends('layouts.app')
+@section('menu')
+    @include('layouts.menuUserAdmin')
+@endsection('menu')
+@section('content')
     <form method="post"  enctype="multipart/form-data" action="#!{{ url('posts/'.$post->id) }}">
         {{ csrf_field() }}
         {{ method_field('PUT') }}
@@ -78,4 +82,5 @@
             autosize($("textarea.autosize"));
         });
     </script>
+@endsection('content')
 

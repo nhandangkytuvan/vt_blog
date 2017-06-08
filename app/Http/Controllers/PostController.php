@@ -160,4 +160,9 @@ class PostController extends Controller
         return redirect('posts');
 
     }
+    //
+    public function delete(Post $post)
+    {
+        return view('posts.delete',['post'=>$post]);
+    }
 }

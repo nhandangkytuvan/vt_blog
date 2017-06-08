@@ -1,4 +1,8 @@
-
+@extends('layouts.app')
+@section('menu')
+    @include('layouts.menuUserAdmin')
+@endsection('menu')
+@section('content')
     <div class="panel panel-default">
         <div class="panel-heading text-center">Danh sách</div>
         <table class="table table-bordered">
@@ -35,12 +39,12 @@
                                         </a> 
                                     </li> 
                                     <li>
-                                        <a href="#!{{ url('posts/'.$post->id.'/edit') }}">
+                                        <a href="{{ url('posts/'.$post->id.'/edit') }}">
                                             <span class="glyphicon glyphicon-pencil"></span> Sửa bài viết
                                         </a> 
                                     </li> 
                                     <li>
-                                        <a href="javascript:;"  data-toggle="modal" data-target="#modalDestroyPost{{ $post->id }}">
+                                        <a href="#!post/{{ $post->id }}/delete"  data-toggle="modal" data-target="#modalDestroy">
                                             <span class="glyphicon glyphicon-trash"></span> Xóa bài viết
                                         </a> 
                                     </li>
@@ -56,4 +60,11 @@
             {{ $posts->appends(request()->except('page'))->links() }}
         </div>
     </div>
+@endsection('content')
+@section('search')
+    @include('posts.search')
+@endsection('search')
+@section('modal')
+    @include('layouts.modalDestroy')
+@endsection('modal')
 

@@ -1,4 +1,8 @@
-
+@extends('layouts.app')
+@section('menu')
+    @include('layouts.menuUserAdmin')
+@endsection('menu')
+@section('content')
     <div class="panel panel-default">
         <div class="panel-heading text-center">Danh sách</div>
         <table class="table table-bordered">
@@ -30,7 +34,7 @@
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li>
-                                        <a href="#!{{ url('users/'.$user->id.'/edit') }}">
+                                        <a href="{{ url('users/'.$user->id.'/edit') }}">
                                             <span class="glyphicon glyphicon-pencil"></span> Sửa tài khoản
                                         </a> 
                                     </li> 
@@ -48,4 +52,4 @@
             @endforeach
         </table>
     </div>
-
+@endsection('content')

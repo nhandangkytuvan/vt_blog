@@ -135,4 +135,9 @@ class MediaController extends Controller
         File::delete(public_path('upload\\').$media->avatar);
         return redirect('medias');
     }
+    //
+    public function delete(Media $media)
+    {
+        return view('medias.delete',['media'=>$media]);
+    }
 }

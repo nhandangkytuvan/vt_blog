@@ -1,4 +1,8 @@
-
+@extends('layouts.app')
+@section('menu')
+    @include('layouts.menuUserAdmin')
+@endsection('menu')
+@section('content')
     <div class="panel panel-default">
         <div class="panel-heading text-center">Danh sách</div>
         <table class="table table-bordered">
@@ -35,7 +39,7 @@
                                         </a> 
                                     </li> 
                                     <li>
-                                        <a href="javascript:;"  data-toggle="modal" data-target="#modalDestroyConfig{{ $config->id }}">
+                                        <a href="#!modalDestroyConfig{{ $config->id }}"  data-toggle="modal" data-target="#modalDestroy">
                                             <span class="glyphicon glyphicon-trash"></span> Xóa cấu hình
                                         </a> 
                                     </li>
@@ -48,4 +52,4 @@
             @endforeach
         </table>
     </div>
-
+@endsection('content')

@@ -12,16 +12,28 @@
 */
 
 Route::get('/',function(){return view('welcome');});
+// home
 Route::get('home','HomeController@home');
+// auth
 Auth::routes();
 // backend
+// terms
 Route::resource('terms', 'TermController');
+Route::get('terms/{term}/delete','TermController@delete');
+// posts
 Route::resource('posts', 'PostController');
+Route::get('posts/{post}/delete','PostController@delete');
+// configs
 Route::resource('configs', 'ConfigController');
+Route::get('configs/{config}/delete','ConfigController@delete');
+// users
 Route::resource('users', 'UserController');
+// medias
 Route::resource('medias', 'MediaController');
-
+Route::get('medias/{media}/delete','MediaController@delete');
+// mails
 Route::get('sendmail','MyMailController@sendmail');
+//
 Route::get('mydb/terms','MydbController@terms');
 Route::get('mydb/posts','MydbController@posts');
 Route::get('mydb/medias','MydbController@medias');

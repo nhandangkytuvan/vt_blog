@@ -1,22 +1,19 @@
-<div class="modal fade" tabindex="-{{ $media->id }}" role="dialog" id="modalDestroyMedia{{ $media->id }}" data-backdrop="static">
-    <div class="modal-dialog" role="document">
+
         <div class="panel panel-default">
             <div class="panel-heading">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Xóa phương tiện</h4>
+                <h4 class="modal-title">Xóa danh mục</h4>
             </div>
             <div class="panel-body">
                 <p>
-                    Xóa phượng tiện có thể gây ra lỗi thiếu ảnh trong bài viết.
+                    Xóa danh mục sẽ xóa toàn bộ bài viết trong danh mục. Hãy chuyển bài viết sang danh mục khác nếu cần giữ lại.
                 </p>
             </div>
             <div class="panel-footer">
-                <form action="{{ url('medias/'.$media->id) }}" method="post">
+                <form action="{{ url('terms/'.$term->id) }}" method="post">
                     {{ csrf_field() }}
                     {{ method_field('DELETE') }}
                     <button type="submit" class="btn btn-danger">Xóa</button>
                 </form>
             </div>
-        </div><!-- /.modal-content -->
-    </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
+        </div>

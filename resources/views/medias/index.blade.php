@@ -1,4 +1,8 @@
-
+@extends('layouts.app')
+@section('menu')
+    @include('layouts.menuUserAdmin')
+@endsection('menu')
+@section('content')
     <div class="panel panel-default">
         <div class="panel-heading text-center">Danh sách</div>
         <div class="panel-body">
@@ -28,12 +32,12 @@
                                             </a> 
                                         </li> 
                                         <li>
-                                            <a href="#!{{ url('medias/'.$media->id.'/edit') }}">
+                                            <a href="{{ url('medias/'.$media->id.'/edit') }}">
                                                 <span class="glyphicon glyphicon-pencil"></span> Sửa phương tiện
                                             </a> 
                                         </li> 
                                         <li>
-                                            <a href="javascript:;"  data-toggle="modal" data-target="#modalDestroyMedia{{ $media->id }}">
+                                            <a href="#!medias/{{ $media->id }}/delete"  data-toggle="modal" data-target="#modalDestroy">
                                                 <span class="glyphicon glyphicon-trash"></span> Xóa phương tiện
                                             </a> 
                                         </li>
@@ -50,4 +54,10 @@
             {{ $medias->appends(request()->except('page'))->links() }}
         </div>
     </div>
-
+@endsection('content')
+@section('search')
+    @include('medias.search')
+@endsection('search')
+@section('modal')
+    @include('layouts.modalDestroy')
+@endsection('modal')

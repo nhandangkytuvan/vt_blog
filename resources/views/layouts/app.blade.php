@@ -16,6 +16,20 @@
     <link href="{{ asset('public/css/app/myapp.css') }}" rel="stylesheet">
     <link href="{{ asset('public/css/app/codepen.min.css') }}" rel="stylesheet">
     <!-- Scripts -->
+    <script src="{{ asset('public/js/app/app.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="{{ asset('public/js/app/jquery.form.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/jquery.popupoverlay.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/jquery-scrolltofixed-min.js') }}"></script>
+    <script src="{{ asset('public/js/app/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/autosize/dist/autosize.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/clipboard/dist/clipboard.min.js') }}"></script>
+    <script src="{{ asset('public/js/app/myclipboard.js') }}"></script>
+    <!-- <script src="{{ asset('public/js/app/overlay.js') }}"></script> -->
+    <script src="{{ asset('public/js/app/myangular.js') }}"></script>
+    <script src="{{ asset('public/js/app/myapp.js') }}"></script>
+    <!-- Scripts -->
     @yield('js')
     <script>
         window.Laravel = {!! json_encode([
@@ -23,12 +37,11 @@
         ]) !!};
     </script>
 </head>
-<body>
-    <div id="app" ng-app="myApp">
+<body ng-app="myApp">
+    <div id="app">
         <nav class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-header">
-
                     <!-- Collapsed Hamburger -->
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-top">
                         <span class="sr-only">Toggle Navigation</span>
@@ -80,43 +93,20 @@
                 </div>
             </div>
         </nav>
-        @yield('content')
-        <!-- <nav class="navbar navbar-default navbar-fixed-bottom visible-xs">
-            <div class="container">
-                <ul class="nav navbar-nav pull-left">
-                    <li><a href="javascript:;" data-toggle="modal" data-target="#myModalMenuTerm">MenuLeft</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right pull-right">
-                    <li><a href="javascript:;">MenuRight</a></li>
-                </ul>
+        <div class="container">
+            <div class="col-sm-3">
+                @yield('menu')
             </div>
-        </nav> -->
-    </div>
-    <!-- Modal -->
-    <!-- <div class="modal fade" id="myModalMenuTerm">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body" style="padding:0;margin-bottom: -23px;">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
+            <div class="col-sm-6">
+                @yield('content')
+            </div>
+            <div class="col-sm-3">
+                @yield('search')
             </div>
         </div>
-    </div> -->
-    <!-- Scripts -->
-    <script src="{{ asset('public/js/app/app.js') }}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
-    <script src="{{ asset('public/js/app/jquery.form.min.js') }}"></script>
-    <script src="{{ asset('public/js/app/jquery.popupoverlay.min.js') }}"></script>
-    <script src="{{ asset('public/js/app/jquery-scrolltofixed-min.js') }}"></script>
-    <script src="{{ asset('public/js/app/tinymce/js/tinymce/tinymce.min.js') }}"></script>
-    <script src="{{ asset('public/js/app/autosize/dist/autosize.min.js') }}"></script>
-    <script src="{{ asset('public/js/app/clipboard/dist/clipboard.min.js') }}"></script>
-    <script src="{{ asset('public/js/app/myclipboard.js') }}"></script>
-    <!-- <script src="{{ asset('public/js/app/overlay.js') }}"></script> -->
-    <script src="{{ asset('public/js/app/myangular.js') }}"></script>
-    <script src="{{ asset('public/js/app/myapp.js') }}"></script>
+    </div>
+    <!-- Modal -->
+    @yield('modal')
+    
 </body>
 </html>
